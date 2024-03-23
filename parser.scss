@@ -1,0 +1,7 @@
+@use "./lib/abstracts/" as *;
+
+$state-delim: $sdelim !default;
+
+@forward "lib/parser" with (
+  $parser-state-delim: $state-delim
+);

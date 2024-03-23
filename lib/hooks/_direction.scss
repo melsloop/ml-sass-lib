@@ -1,0 +1,6 @@
+@use "../refs";
+
+// direction
+@mixin use-direction($var: name(), $state: "") {
+  @include refs.use(direction, direction, $var, $state);
+}

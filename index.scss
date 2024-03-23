@@ -1,0 +1,23 @@
+@use "./lib/abstracts/" as *;
+
+// overridable abstracts
+$stylesheet-id: $sid !default;
+$namespace-prefix: $nsp !default;
+$global-namespace-prefix: $gns !default;
+$state-delim: $sdelim !default;
+
+@forward "lib/refs" with (
+  $refs-prefix: $namespace-prefix
+);
+
+@forward "lib/states" with (
+  $state-delim: $state-delim
+);
+
+@forward "lib/component" with (
+  $id: $stylesheet-id
+);
+
+@forward "lib/hooks/index" with (
+  $hookId: $stylesheet-id
+);

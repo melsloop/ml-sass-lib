@@ -1,0 +1,17 @@
+{
+  "name": "@melsloop/ml-sass-lib",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.scss",
+  "scripts": {
+    "build": "sass index.scss dist/index.css --style=compressed",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "debug": "sass --load-path=. -wc .",
+    "clean": "find -type f \\( -name \"*.css\" -o -name \"*.css.map\" \\) -exec rm {} +"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.72.0"
+  }
+}

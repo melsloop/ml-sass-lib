@@ -1,0 +1,15 @@
+@use "sass:map";
+@use "sass:string";
+@use "./merge";
+
+$id: "" !default;
+
+@function id($part: "", $state: "") {
+  // if has $part, use part in kebab case next to stylesheet ID
+  @if string.length($part) > 0 {
+    @return #{$id}-#{$part}#{$state};
+  }
+
+  // otherwise, use only stylesheet ID
+  @return #{$id};
+}

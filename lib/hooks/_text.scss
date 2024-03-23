@@ -1,0 +1,42 @@
+@use "../refs" as refs;
+
+$text-hook-id: xoxo !default;
+
+@mixin use-text-color($var: $text-hook-id, $state: "") {
+  @include refs.use(color, text-color, $var, $state);
+}
+
+// font-family
+@mixin use-font-family($var: $text-hook-id, $state: "") {
+  @include refs.use(font-family, font-family, $var, $state);
+}
+
+// font-size
+@mixin use-font-size($var: $text-hook-id, $state: "") {
+  @include refs.use(font-size, font-size, $var, $state);
+}
+
+// font-weight
+@mixin use-font-weight($var: $text-hook-id, $state: "") {
+  @include refs.use(font-weight, font-weight, $var, $state);
+}
+
+// font-style
+@mixin use-font-style($var: $text-hook-id, $state: "") {
+  @include refs.use(font-style, font-style, $var, $state);
+}
+
+// line-height
+@mixin use-line-height($var: $text-hook-id, $state: "") {
+  @include refs.use(line-height, line-height, $var, $state);
+}
+
+// letter-spacing
+@mixin use-letter-spacing($var: $text-hook-id, $state: "") {
+  @include refs.use(letter-spacing, letter-spacing, $var, $state);
+}
+
+// text-transform
+@mixin use-text-transform($var: $text-hook-id, $state: "") {
+  @include refs.use(text-transform, text-transform, $var, $state);
+}
