@@ -1,5 +1,7 @@
 @use "../refs" as refs;
 
+$animation-hook-id: anim !default;
+
 @mixin use-animation($anim, $comp) {
   animation: $anim;
   animation-duration: compRef($comp, animation-duration);
@@ -10,7 +12,7 @@
   @include use-animation($anim, #{$comp}-#{$anim});
 }
 
-@mixin use-transform($var: name(), $state: "") {
+@mixin use-transform($var: $animation-hook-id, $state: "") {
   @include refs.use(transform, transform, $var, $state);
 }
 

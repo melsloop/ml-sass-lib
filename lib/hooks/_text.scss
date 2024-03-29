@@ -1,6 +1,6 @@
 @use "../refs" as refs;
 
-$text-hook-id: xoxo !default;
+$text-hook-id: text !default;
 
 @mixin use-text-color($var: $text-hook-id, $state: "") {
   @include refs.use(color, text-color, $var, $state);

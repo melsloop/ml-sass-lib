@@ -46,7 +46,6 @@ $parser-state-delim: mlxxx !default;
 @function transform($map, $path, $delim: $parser-state-delim) {
   $result: ();
 
-  // @debug #{'>>>>>'}#{$map};
   @each $key, $value in $map {
     $variable-name: if($path, "#{$path}-#{$key}", "#{$key}");
 
@@ -91,7 +90,6 @@ $parser-state-delim: mlxxx !default;
 }
 
 @mixin compile($exports, $prefix: "", $delim: $parser-state-delim) {
-  @debug $exports;
   @each $vars in $exports {
     @include -parse((transform($vars, refs.prefix($prefix), $delim)));
   }

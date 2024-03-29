@@ -1,9 +1,13 @@
+@use "../refs" as refs;
+
+$position-hook-id: pos !default;
+
 // offset x
-@mixin use-offset-x($var: name(), $state: '') {
-	@include use(left, offset-x, $var, $state);
+@mixin use-offset-x($var: $position-hook-id, $state: "") {
+  @include use(left, offset-x, $var, $state);
 }
 
 // offset y
-@mixin use-offset-y($var: name(), $state: '') {
-	@include use(top, offset-y, $var, $state);
+@mixin use-offset-y($var: $position-hook-id, $state: "") {
+  @include use(top, offset-y, $var, $state);
 }

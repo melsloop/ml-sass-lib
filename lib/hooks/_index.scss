@@ -7,9 +7,27 @@ $hookId: hook !default;
 @forward "./text" with (
   $text-hook-id: $hookId
 );
-// @forward "lib/hooks/content";
-// @forward "lib/hooks/flex";
-// @forward "lib/hooks/animation";
-// @forward "lib/hooks/position";
-// @forward "lib/hooks/direction";
-// @forward "lib/hooks/display";
+
+@forward "./content" with (
+  $content-hook-id: $hookId
+);
+
+@forward "./flex" with (
+  $flex-hook-id: $hookId
+);
+
+@forward "./animation" with (
+  $animation-hook-id: $hookId
+);
+
+@forward "./position" with (
+  $position-hook-id: $hookId
+);
+
+@forward "./direction" with (
+  $direction-hook-id: $hookId
+);
+
+@forward "./display" with (
+  $display-hook-id: $hookId
+);

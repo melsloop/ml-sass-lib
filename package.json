@@ -1,7 +1,7 @@
 {
   "name": "@melsloop/ml-sass-lib",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.1",
+  "description": "Sass library for component theming and variants",
   "main": "index.scss",
   "scripts": {
     "build": "sass index.scss dist/index.css --style=compressed",
@@ -9,7 +9,11 @@
     "debug": "sass --load-path=. -wc .",
     "clean": "find -type f \\( -name \"*.css\" -o -name \"*.css.map\" \\) -exec rm {} +"
   },
-  "author": "",
+  "author": "Tomer Lichtash",
+  "bugs": {
+    "url": "https://github.com/melsloop/issues",
+    "email": "support@melsloop.com"
+  },
   "license": "ISC",
   "devDependencies": {
     "sass": "^1.72.0"

@@ -1,4 +1,8 @@
+@use "../refs";
+
+$display-hook-id: display !default;
+
 // opacity
-@mixin use-opacity($var: name(), $state: '') {
-	@include use(opacity, opacity, $var, $state);
+@mixin use-opacity($var: $display-hook-id, $state: "") {
+  @include use(opacity, opacity, $var, $state);
 }
