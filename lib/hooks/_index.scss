@@ -1,0 +1,33 @@
+$hookId: hook !default;
+
+@forward "./box" with (
+  $box-hook-id: $hookId
+);
+
+@forward "./text" with (
+  $text-hook-id: $hookId
+);
+
+@forward "./content" with (
+  $content-hook-id: $hookId
+);
+
+@forward "./flex" with (
+  $flex-hook-id: $hookId
+);
+
+@forward "./animation" with (
+  $animation-hook-id: $hookId
+);
+
+@forward "./position" with (
+  $position-hook-id: $hookId
+);
+
+@forward "./direction" with (
+  $direction-hook-id: $hookId
+);
+
+@forward "./display" with (
+  $display-hook-id: $hookId
+);

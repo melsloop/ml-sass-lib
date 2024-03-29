@@ -1,0 +1,8 @@
+@use "../refs" as refs;
+
+$flex-hook-id: flex !default;
+
+// gap
+@mixin use-gap($var: $flex-hook-id, $state: "") {
+  @include refs.use(gap, gap, $var, $state);
+}

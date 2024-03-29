@@ -1,0 +1,217 @@
+@use "../refs" as refs;
+
+$box-hook-id: box !default;
+
+// background-color
+@mixin use-background-color($v: $box-hook-id, $s: "") {
+  @include refs.use(background-color, background-color, $v, $s);
+}
+
+@mixin use-outline($v: $box-hook-id, $s: "") {
+  @include refs.use(outline, outline, $v, $s);
+}
+
+// gradient-color
+@mixin use-gradient($v: $box-hook-id, $s: "") {
+  @include refs.use(background, background-color, $v, $s);
+}
+
+// border-top
+@mixin use-border-top-size($v: $box-hook-id, $s: "") {
+  @include refs.use(border-top-width, border-top-size, $v, $s);
+}
+@mixin use-border-top-style($v: $box-hook-id, $s: "") {
+  @include refs.use(border-top-style, border-top-style, $v, $s);
+}
+@mixin use-border-top-color($v: $box-hook-id, $s: "") {
+  @include refs.use(border-top-color, border-top-color, $v, $s);
+}
+
+// border-right
+@mixin use-border-right-size($v: $box-hook-id, $s: "") {
+  @include refs.use(border-right-width, border-right-size, $v, $s);
+}
+@mixin use-border-right-color($v: $box-hook-id, $s: "") {
+  @include refs.use(border-right-color, border-right-color, $v, $s);
+}
+@mixin use-border-right-style($v: $box-hook-id, $s: "") {
+  @include refs.use(border-right-style, border-right-style, $v, $s);
+}
+
+// border-left
+@mixin use-border-left-size($v: $box-hook-id, $s: "") {
+  @include refs.use(border-left-width, border-left-size, $v, $s);
+}
+@mixin use-border-left-style($v: $box-hook-id, $s: "") {
+  @include refs.use(border-left-style, border-left-style, $v, $s);
+}
+@mixin use-border-left-color($v: $box-hook-id, $s: "") {
+  @include refs.use(border-left-color, border-left-color, $v, $s);
+}
+
+// border-bottom
+@mixin use-border-bottom-size($v: $box-hook-id, $s: "") {
+  @include refs.use(border-bottom-width, border-bottom-size, $v, $s);
+}
+@mixin use-border-bottom-style($v: $box-hook-id, $s: "") {
+  @include refs.use(border-bottom-style, border-bottom-style, $v, $s);
+}
+@mixin use-border-bottom-color($v: $box-hook-id, $s: "") {
+  @include refs.use(border-bottom-color, border-bottom-color, $v, $s);
+}
+
+// margin-top
+@mixin use-margin-top($v: $box-hook-id, $s: "") {
+  @include refs.use(margin-top, margin-top, $v, $s);
+}
+
+// margin-bottom
+@mixin use-margin-bottom($v: $box-hook-id, $s: "") {
+  @include refs.use(margin-bottom, margin-bottom, $v, $s);
+}
+
+// margin-right
+@mixin use-margin-right($v: $box-hook-id, $s: "") {
+  @include refs.use(margin-right, margin-right, $v, $s);
+}
+
+// margin-left
+@mixin use-margin-left($v: $box-hook-id, $s: "") {
+  @include refs.use(margin-left, margin-left, $v, $s);
+}
+
+// margin-start
+@mixin use-margin-start($v: $box-hook-id, $s: "") {
+  @include refs.use(margin-inline-start, margin-start, $v, $s);
+}
+
+// margin-end
+@mixin use-margin-end($v: $box-hook-id, $s: "") {
+  @include refs.use(margin-inline-end, margin-end, $v, $s);
+}
+
+// padding-top
+@mixin use-padding-top($v: $box-hook-id, $s: "") {
+  @include refs.use(padding-top, padding-top, $v, $s);
+}
+
+// padding-bottom
+@mixin use-padding-bottom($v: $box-hook-id, $s: "") {
+  @include refs.use(padding-bottom, padding-bottom, $v, $s);
+}
+
+// padding-right
+@mixin use-padding-right($v: $box-hook-id, $s: "") {
+  @include refs.use(padding-right, padding-right, $v, $s);
+}
+
+// padding-left
+@mixin use-padding-left($v: $box-hook-id, $s: "") {
+  @include refs.use(padding-left, padding-left, $v, $s);
+}
+
+// gutter - inner
+@mixin use-inner-gutter($v: $box-hook-id, $s: "") {
+  @include refs.use(padding, gutter, $v, $s);
+}
+
+// gutter - outer
+@mixin use-outer-gutter($v: $box-hook-id, $s: "") {
+  @include refs.use(margin, gutter, $v, $s);
+}
+
+// box-shadow
+@mixin use-shadow($v: $box-hook-id, $s: "") {
+  @include refs.use(box-shadow, shadow, $v, $s);
+}
+
+// height
+@mixin use-height($v: $box-hook-id, $s: "") {
+  @include refs.use(height, height, $v, $s);
+}
+
+// @mixin useMinHeight($v: $box-hook-id, $s: '') {
+// 	@include refs.use(min-height, height, $v, $s);
+// }
+
+// width
+@mixin use-width($v: "", $s: "") {
+  @include refs.use(width, width, $v, $s);
+}
+
+@mixin use-min-width($v: $box-hook-id, $s: "") {
+  @include refs.use(min-width, min-width, $v, $s);
+}
+
+// radius
+@mixin use-radius($v: $box-hook-id, $s: "") {
+  @include refs.use(border-radius, radius, $v, $s);
+}
+
+// --------
+@mixin use-horizontal-padding($v: $box-hook-id, $s: "") {
+  @include use-padding-right($v, $s: $s);
+  @include use-padding-left($v, $s: $s);
+}
+
+// @mixin use-horizontal-margin($v: $box-hook-id, $s: '') {
+// 	@include refs.use(margin-right, horizontal-margin, $v, $s);
+// 	@include refs.use(margin-left, horizontal-margin, $v, $s);
+// }
+
+@mixin use-vertical-margin($v: $box-hook-id, $s: "") {
+  @include use-margin-top($v: $box-hook-id, $s: "");
+  @include use-margin-bottom($v: $box-hook-id, $s: "");
+}
+
+@mixin use-vertical-padding($v: $box-hook-id, $s: "") {
+  @include use-padding-top($v: $box-hook-id, $s: $s);
+  @include use-padding-bottom($v: $box-hook-id, $s: $s);
+}
+
+// margin all
+@mixin use-margin($v: $box-hook-id, $s: "") {
+  @include use-margin-top($v: $box-hook-id, $s: "");
+  @include use-margin-right($v: $box-hook-id, $s: "");
+  @include use-margin-bottom($v: $box-hook-id, $s: "");
+  @include use-margin-left($v: $box-hook-id, $s: "");
+}
+
+// padding all
+@mixin use-padding($v: $box-hook-id, $s: "") {
+  @include use-padding-top($v: $box-hook-id, $s: $s);
+  @include use-padding-right($v: $box-hook-id, $s: $s);
+  @include use-padding-bottom($v: $box-hook-id, $s: $s);
+  @include use-padding-left($v: $box-hook-id, $s: $s);
+}
+
+// @mixin useBorder($v: $box-hook-id, $s: '') {
+// 	@include use-border-size($v: $box-hook-id, $s: $s);
+// 	@include use-border-style($v: $box-hook-id, $s: $s);
+// 	@include use-border-color($v: $box-hook-id, $s: $s);
+// }
+
+// border all
+@mixin use-border-size($v: $box-hook-id, $s: "") {
+  @include refs.use(border-width, border-size, $v, $s);
+}
+@mixin use-border-style($v: $box-hook-id, $s: "") {
+  @include refs.use(border-style, border-style, $v, $s);
+}
+@mixin use-border-color($v: $box-hook-id, $s: "") {
+  @include refs.use(border-color, border-color, $v, $s);
+}
+
+// size all
+@mixin use-size($v: $box-hook-id, $s: "") {
+  @include refs.use(height, size, $v, $s);
+  @include refs.use(width, size, $v, $s);
+}
+
+@mixin use-right($v: $box-hook-id, $s: "") {
+  @include refs.use(right, right, $v, $s);
+}
+
+@mixin use-left($v: $box-hook-id, $s: "") {
+  @include refs.use(left, left, $v, $s);
+}
