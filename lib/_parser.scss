@@ -1,4 +1,4 @@
-$prefix: dada !default;
+$prefix: ml !default;
 
 // stylelint-disable scss/at-mixin-pattern
 @use "sass:map";
@@ -8,7 +8,7 @@ $prefix: dada !default;
   $refs-prefix: $prefix
 );
 
-$parser-state-delim: mlxxx !default;
+$parser-state-delim: __ !default;
 
 @function -is-empty-var-map($vars) {
   @return (type-of($vars) == "list") and (length($vars) == 0);
@@ -33,7 +33,7 @@ $parser-state-delim: mlxxx !default;
   @return str-index($val, "-content") != null;
 }
 
-@mixin -parse($vars) {
+@mixin parse($vars) {
   @each $key, $val in $vars {
     @if -is-empty-var-map($val) {
       @error #{empty theme vars object #{":"}$key};
@@ -48,10 +48,6 @@ $parser-state-delim: mlxxx !default;
 
   @each $key, $value in $map {
     $variable-name: if($path, "#{$path}-#{$key}", "#{$key}");
-
-    // @if ($key == "url") {
-    // 	$value: #{"url(../../logo/#{$value})"};
-    // }
 
     // handle states path
     @if str-index($path, $delim) {
@@ -91,6 +87,6 @@ $parser-state-delim: mlxxx !default;
 
 @mixin compile($exports, $prefix: "", $delim: $parser-state-delim) {
   @each $vars in $exports {
-    @include -parse((transform($vars, refs.prefix($prefix), $delim)));
+    @include parse((transform($vars, refs.prefix($prefix), $delim)));
   }
 }

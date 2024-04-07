@@ -1,0 +1,34 @@
+// Expected CSS output:
+// --------------------------------------------------------
+// .app {
+//   --ml-button-background-color: red;
+//   --ml-button-background-color__hover: blue;
+//   --ml-container-background-color: none;
+//   --ml-container-background-color__hover: #f0f0f0;
+// }
+
+@use "./lib/parser" as *;
+
+$button: (
+  background-color: red,
+  __hover: (
+    background-color: blue,
+  ),
+);
+
+$container: (
+  background-color: none,
+  __hover: (
+    background-color: #f0f0f0,
+  ),
+);
+
+$vars: (
+  button: $button,
+  container: $container,
+);
+
+.app {
+  // TODO: fix list/map type mismatch error when empty list () is not passed
+  @include compile(($vars, ()));
+}
