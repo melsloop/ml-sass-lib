@@ -1,6 +1,6 @@
 {
   "name": "@melsloop/ml-sass-lib",
-  "version": "1.0.2",
+  "version": "0.0.1",
   "description": "Sass library for component theming and variants",
   "main": "index.scss",
   "scripts": {
