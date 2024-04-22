@@ -1,4 +1,4 @@
-@use "../refs" as refs;
+@use "../refs" as *;
 
 $position-hook-id: pos !default;
 

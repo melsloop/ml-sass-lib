@@ -1,4 +1,4 @@
-@use "../refs" as refs;
+@use "../refs" as *;
 
 $animation-hook-id: anim !default;
 
@@ -13,7 +13,7 @@ $animation-hook-id: anim !default;
 }
 
 @mixin use-transform($var: $animation-hook-id, $state: "") {
-  @include refs.use(transform, transform, $var, $state);
+  @include use(transform, transform, $var, $state);
 }
 
 // TODO:

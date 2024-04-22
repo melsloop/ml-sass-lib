@@ -1,8 +1,8 @@
-@use "../refs";
+@use "../refs" as *;
 
 $direction-hook-id: dir !default;
 
 // direction
 @mixin use-direction($var: $direction-hook-id, $state: "") {
-  @include refs.use(direction, direction, $var, $state);
+  @include use(direction, direction, $var, $state);
 }
